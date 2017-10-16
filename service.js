@@ -38,4 +38,4 @@ function scan(first, last) {
   fs.writeSync(0, '\n');
 }
 
-scan(0x3, 0x7F);
+scan(0x0, 0x7F);
