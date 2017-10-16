@@ -10,7 +10,6 @@ var opts = {
   device: '/dev/i2c-1', // Pass your i2c device here if it is not /dev/i2c-1
 
 };
-var wire = new i2c(opts.address, {device: opts.device});s
 
 var oled = new oled(opts);
 
