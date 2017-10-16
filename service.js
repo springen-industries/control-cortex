@@ -10,7 +10,7 @@ var opts = {
   device: '/dev/i2c-1', // Pass your i2c device here if it is not /dev/i2c-1
 
 };
-var wire = new i2c(opts.address, {device: opts.device});s
+var wire = new i2c( {device: opts.device});
 
 console.log(wire.scanSync());
   // result contains an array of addresses
