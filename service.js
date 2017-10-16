@@ -4,5 +4,5 @@ var wire = new i2c(address, {device: '/dev/i2c-1'}); // point to your i2c addres
 
 wire.scan(function(err, data) {
   // result contains an array of addresses
-  console.write(data);
+  console.log(data);
 });
