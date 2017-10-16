@@ -12,12 +12,5 @@ var opts = {
 };
 var wire = new i2c(opts.address, {device: opts.device});s
 
-var oled = new oled(opts);
-
-oled.turnOnDisplay();
-
-
-wire.scan(function(err, data) {
+console.log(wire.scanSync());
   // result contains an array of addresses
-  console.log(data);
-});
