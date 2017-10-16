@@ -1,5 +1,6 @@
 var i2c = require('i2c');
 var oled = require('oled-ssd1306-i2c');
+var wire = new i2c(opts.address, {device: opts.device});
 
 
 var opts = {
@@ -11,7 +12,8 @@ var opts = {
 };
 
 
-var wire = new i2c(opts.address, {device: opts.device});
+var oled = new oled(opts);
+ 
 oled.turnOnDisplay();
 // draws 4 white pixels total
 // format: [x, y, color]
