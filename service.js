@@ -8,7 +8,7 @@ var opts = {
   height: 32, // screen height
   address: 0x7B, // Pass I2C address of screen if it is not the default of 0x3C
   device: '/dev/i2c-1', // Pass your i2c device here if it is not /dev/i2c-1
-  microview: true, // set to true if you have a microview display
+
 };
 
 
