@@ -10,18 +10,11 @@ var opts = {
   device: '/dev/i2c-1', // Pass your i2c device here if it is not /dev/i2c-1
 
 };
+var wire = new i2c(opts.address, {device: opts.device});s
 
 var oled = new oled(opts);
 
 oled.turnOnDisplay();
-// draws 4 white pixels total
-// format: [x, y, color]
-oled.drawPixel([
-    [128, 1, 1],
-    [128, 32, 1],
-    [128, 16, 1],
-    [64, 16, 1]
-]);
 
 
 wire.scan(function(err, data) {
