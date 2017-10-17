@@ -9,5 +9,5 @@ new i2cUtils().scan(0x0, 0x7F);
 
 raspi.init(() => {
   const i2c = new I2C();
-  console.log(i2c.readByteSync(0x18)); // Read one byte from the device at address 18
+  console.log(i2c.readByteSync(0x8F)); // Read one byte from the device at address 18
 });
