@@ -1,7 +1,7 @@
 // When run, this program will output the same information as the
 // command 'i2cdetect -y -r 1'
 
-i2cUtils = function {
+i2cUtils = function i2cUtils() {
 
 var fs = require('fs'),
   i2c = require('i2c-bus'),
