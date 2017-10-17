@@ -12,8 +12,11 @@ function onResult(results){
 
 var i2c1 = i2c.open();
 
-var result = i2c1.readByte(0x8f, 6, function (err, config) {
-          if (err) return onResult(err);
-          if (config & 0x10) return read();
-          onResult(null);
-        });
+function (cb) {
+     // Display temperature
+     i2c1.readWord(0x7F, 6, function (err, rawTemp) {
+       if (err) return cb(err);
+       console.log('temp: ' + toCelsius(rawTemp));
+       cb(null);
+     });
+   }
