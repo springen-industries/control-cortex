@@ -12,4 +12,4 @@ function onResult(results){
 
 var i2c1 = i2c.open();
 
-var result = i2c1.readByte(0x8f, onResult());
+var result = i2c1.readByte(0x8f,6, onResult());
