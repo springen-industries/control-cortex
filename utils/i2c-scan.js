@@ -1,6 +1,8 @@
 // When run, this program will output the same information as the
 // command 'i2cdetect -y -r 1'
 
+i2cUtils = function {
+
 var fs = require('fs'),
   i2c = require('i2c-bus'),
   i2c1 = i2c.openSync(1);
@@ -37,4 +39,6 @@ function scan(first, last) {
   fs.writeSync(0, '\n');
 }
 
-module.exports = scan;
+}
+
+module.exports = i2cUtils;
