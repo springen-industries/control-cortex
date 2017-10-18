@@ -6,5 +6,6 @@ new i2cUtils().scan(0x0, 0x7F);
 
 var GIMBAL_1_ADDRESS = 0x8F;
 
-var i2c1 = i2c.open(1);
-i2c1.i2cRead(GIMBAL_1_ADDRESS,6);
+var i2c1 = i2c.openSync(1);
+var output = i2c1.i2cReadSynch(GIMBAL_1_ADDRESS,6);
+console.log(output);
