@@ -19,6 +19,7 @@
   "devDependencies": {},
   "dependencies": {
     "i2c": "^0.2.3",
-    "i2c-bus": "^1.2.3"
+    "i2c-bus": "^1.2.3",
+    "sleep": "^5.1.1"
   }
 }
