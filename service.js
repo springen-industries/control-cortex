@@ -7,5 +7,5 @@ new i2cUtils().scan(0x0, 0x7F);
 var GIMBAL_1_ADDRESS = 0x8F;
 
 var i2c1 = i2c.openSync(1);
-while ((i2c1.readByteSync(GIMBAL_1_ADDRESS, 0xac) & 0x80) === 0) {
+while ((i2c1.readByteSync(GIMBAL_1_ADDRESS, 6) & 0x8F) === 0) {
 }
