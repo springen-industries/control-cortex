@@ -10,5 +10,5 @@ i2cFace.listAddresses();
 for(i=0;i<1000;i++) {
   var output = i2cFace.readMessage(26);
   console.log(output);
-  sleep.sleep(10);
+  sleep.msleep(10);
 }
