@@ -8,7 +8,7 @@ i2cFace.scan(0x0, 0x7F);
 i2cFace.listAddresses();
 
 while(true) {
-  var output = i2cFace.readModuleState(26,4);
+  var output = i2cFace.readModuleState(26,5);
   console.log(output);
-  sleep.msleep(10);
+  sleep.msleep(40);
 }
