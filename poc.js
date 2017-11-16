@@ -9,7 +9,6 @@ var i2cFace = new i2cUtils();
 
 while(true) {
   var output =  i2cFace.readModuleState(26,4);
-  console.log(output);
   i2cFace.writeToRadio(8,output);
   sleep.msleep(20);
 }
