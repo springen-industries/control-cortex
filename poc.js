@@ -8,7 +8,8 @@ var i2cFace = new i2cUtils();
 //i2cFace.listAddresses();
 
 while(true) {
-  var output =  i2cFace.readModuleState(26,4)
+  var output =  i2cFace.readModuleState(26,4);
   console.log(output);
-  sleep.msleep(40);
+  i2cFace.writeToRadio(8,output);
+  sleep.msleep(20);
 }
