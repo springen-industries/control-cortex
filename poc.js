@@ -28,7 +28,7 @@ function normalizeBytes(bytes) {
     // use auto calibration to determine actual endpoints and then generate
     // a 5% deadband around stick centers
     // make deadband tweakabe as a percentage
-    for (i=0;i<bytes.length;i++) {
+    for (var i=0;i<bytes.length;i++) {
       // normalize value
       // value needs to be shifted to where 128 is the middle stick value between 0 and 255
       var normalizedBytes = {};
