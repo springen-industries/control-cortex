@@ -24,7 +24,7 @@ function normalizeBytes(bytes) {
     if (bytes[i] > axisMinimum[i] && bytes[i] < deadband_minimum  ){
       bytes[i] = map_range(bytes[i],axisMinimum[i],255,0,128);
     } else if(bytes[i] > deadband_maximum) {
-      bytes[i] = map_range(bytes[i],maximum[i],255,128,256);
+      bytes[i] = map_range(bytes[i],axisMaximum[i],255,128,256);
     } else {
       bytes[i] = 128;
     }
