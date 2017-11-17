@@ -9,12 +9,12 @@ var i2cFace = new i2cUtils();
 
 while(true) {
   var output =  i2cFace.readModuleState(26,4);
-  i2cFace.writeToRadio(8,output);
+  i2cFace.writeToRadio(8,byteToPPM((output);
 
 }
 
 
-// takes in a value from the i2c-gimbal module and converts it to PPM between 1000 and 2000 ms
-function byteToPPM(byte) {
-
+// Takes readings from i2c-gimbal and shifts them to 0-255 for easier conversion to PPM
+function normalizeBytes(byte) {
+  return byte;
 }
