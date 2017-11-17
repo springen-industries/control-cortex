@@ -13,7 +13,6 @@ var channel_max_byte = [150,150,150,150];
 
 while(true) {
   var gimbalInput =  i2cFace.readModuleState(26,4);
-  gimbalInput.push(50);
   i2cFace.writeToRadio(8,normalizeBytes(gimbalInput));
 
 }
@@ -37,4 +36,4 @@ function normalizeBytes(bytes) {
 
 function mapRange(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
-} 
+}
