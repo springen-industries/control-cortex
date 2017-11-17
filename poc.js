@@ -4,8 +4,8 @@ var sleep = require("sleep");
 var i2cFace = new i2cUtils();
 
 // set default channel_min_byte and channel_max_byte Array
-var channel_min_byte = {255,255,255,255}
-var channel_max_byte = {150,150,150,150}
+var channel_min_byte = [200,200,200,200]
+var channel_max_byte = [150,150,150,150]
 
 // i2cFace.scan(0x0, 0x7F);
 //
