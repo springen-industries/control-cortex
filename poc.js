@@ -25,7 +25,7 @@ function normalizeBytes(bytes) {
     for (var i=0;i<bytes.length;i++) {
       if (bytes[i] > channel_min_byte[i] && bytes < deadband_low) {
         normalizedBytes.push(mapRange(bytes[i]),channel_min_byte[i],255,0,128);
-      } else if (byte > deadband_high) {
+      } else if (bytes[i] > deadband_high) {
         normalizedBytes.push(mapRange(bytes[i]),0,channel_max_byte[i],128,255);
       } else {
         //deadband
