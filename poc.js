@@ -45,7 +45,7 @@ function normalizeBytes(bytes) {
         normalizedBytes.push(0)
       }
     }
-    return bytes;
+    return normalizedBytes;
 }
 
 function mapRange(value, low1, high1, low2, high2) {
