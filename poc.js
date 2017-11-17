@@ -32,7 +32,7 @@ function normalizeBytes(bytes) {
       // normalize value
       // value needs to be shifted to where 128 is the middle stick value between 0 and 255
       var normalizedBytes = {};
-      if (byte > channel_min_byte[i]) && (byte < deadband_low) {
+      if (byte > channel_min_byte[i] && byte < deadband_low) {
         // byte represents a value in the range of  channel_min_byte (default 200) but not in deadban.
         // byte needs to be shifted from its current range to representing somewhere between 0 and 128 (low half)
         // of normalized byte array
