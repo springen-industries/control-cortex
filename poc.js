@@ -9,9 +9,8 @@ var i2cFace = new i2cUtils();
 
 while(true) {
   var output =  i2cFace.readModuleState(26,4);
-  for(i=0; i < output.length; i++){
-      i2cFace.writeToRadio(8,byteToPPM(output[i]));
-  }
+  i2cFace.writeToRadio(8,output);
+
 }
 
 
