@@ -2,7 +2,8 @@
 var i2cUtils = require('./lib/i2c-utils');
 var sleep = require("sleep");
 var i2cFace = new i2cUtils();
-
+var deadband_low = 250;
+var deadband_high = 10
 // set default channel_min_byte and channel_max_byte Array
 var channel_min_byte = [200,200,200,200];
 var channel_max_byte = [150,150,150,150];
