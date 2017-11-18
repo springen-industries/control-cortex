@@ -27,12 +27,13 @@ function normalizeBytes(bytes) {
       byteBuffer[i] = map_range(bytes[i],0,axisMaximum[i],128,256);
     }
     // roll
-    bytes[0] = byteBuffer[3];
+    bytes[0] = byteBuffer[2];
     // pitch
-    bytes[1] = byteBuffer[4];
+    bytes[1] = byteBuffer[3];
     //throttle
-    bytes[2] = byteBuffer[1];
+    bytes[2] = byteBuffer[0];
     // yaw
+    bytes[3] = byteBuffer[1]
   }
   return bytes;
 }
