@@ -22,18 +22,18 @@ function normalizeBytes(bytes) {
   var byteBuffer = [];
   for(var i=0;i<bytes.length;i++){
     if (bytes[i] > axisMinimum[i] ){
-      bytes[i] = map_range(bytes[i],axisMinimum[i],255,0,128);
+      byteBuffer[i] = map_range(bytes[i],axisMinimum[i],255,0,128);
     } else {
-      bytes[i] = map_range(bytes[i],0,axisMaximum[i],128,256);
+      byteBuffer[i] = map_range(bytes[i],0,axisMaximum[i],128,256);
     }
-  //   // roll
-  //   bytes[0] = byteBuffer[3];
-  //   // pitch
-  //   bytes[1] = byteBuffer[4];
-  //   // throttle
-  //   bytes[2] = byteBuffer[1];
-  //   // yaw
-  // }
+    // roll
+    bytes[0] = byteBuffer[3];
+    // pitch
+    bytes[1] = byteBuffer[4];
+    //throttle
+    bytes[2] = byteBuffer[1];
+    // yaw
+  }
   return bytes;
 }
 
