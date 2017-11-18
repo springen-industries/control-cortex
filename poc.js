@@ -17,7 +17,6 @@ while(true) {
 
 }
 
-
 // Takes readings from i2c-gimbal and shifts them to 0-255 for easier conversion to PPM
 function normalizeBytes(bytes) {
   for(var i=0;i<bytes.length;i++){
