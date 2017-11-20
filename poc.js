@@ -19,13 +19,19 @@ while(true) {
 
 // Takes readings from i2c-gimbal and shifts them to 0-255 for easier conversion to PPM
 function normalizeBytes(bytes) {
-  var byteBuffer = [];
+  var byteBuffer = [255,255,255,255];
   for(var i=0;i<bytes.length;i++){
     if (bytes[i] > axisMinimum[i] ){
       byteBuffer[i] = map_range(bytes[i],axisMinimum[i],255,0,128);
     } else {
       byteBuffer[i] = map_range(bytes[i],0,axisMaximum[i],128,256);
     }
+    if (bytes[i] > axisMaximum[i]){
+        axisMaximum[i] = bytes[i];
+    } else if (bytes[i] < axisMinimum[i]){
+      axisMinimum[i] = bytes[i];
+    }
+
     // roll
     bytes[0] = byteBuffer[2];
     // pitch
@@ -33,7 +39,7 @@ function normalizeBytes(bytes) {
     //throttle
     bytes[2] = byteBuffer[0];
     // yaw
-    bytes[3] = byteBuffer[1]
+    bytes[3] = byteBuffer[1];
   }
   return bytes;
 }
