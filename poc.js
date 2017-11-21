@@ -17,7 +17,7 @@ while(true) {
 
 // Takes readings from i2c-gimbal and shifts them to 0-255 for easier conversion to PPM
 function orderChannels(bytes) {
-  var byteBuffer = [255,255,255,255];
+  var byteBuffer = new Array();
     // roll
     byteBuffer[2] = bytes[0];
     // pitch
