@@ -19,14 +19,14 @@ while(true) {
 function orderChannels(bytes) {
   var byteBuffer = [255,255,255,255];
     // roll
-    bytes[0] = byteBuffer[2];
+    byteBuffer[2] = bytes[0];
     // pitch
-    bytes[1] = byteBuffer[3];
+    byteBuffer[3] = bytes[1];
     //throttle
-    bytes[2] = byteBuffer[0];
+    byteBuffer[0] = bytes[2];
     // yaw
-    bytes[3] = byteBuffer[1];
-  
+    byteBuffer[1] = bytes[3];
+
   console.log(bytes[0] + " " + bytes[1] + " " + bytes[2] + " " + bytes[3]);
-  return bytes;
+  return byteBuffer;
 }
