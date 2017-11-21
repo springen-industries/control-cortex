@@ -12,7 +12,7 @@ var axisMaximum = [100,100,100,100];
 
 while(true) {
   var output =  i2cFace.readModuleState(26,4);
-  i2cFace.writeToRadio(8,orderChannels(output));
+  i2cFace.writeToRadio(8,output);
 }
 
 // Takes readings from i2c-gimbal and shifts them to 0-255 for easier conversion to PPM
