@@ -27,6 +27,6 @@ function orderChannels(bytes) {
     // yaw
     byteBuffer[1] = bytes[3];
 
-  console.log(bytes[0] + " " + bytes[1] + " " + bytes[2] + " " + bytes[3]);
+  console.log(byteBuffer[0] + " " + byteBuffer[1] + " " + byteBuffer[2] + " " + byteBuffer[3]);
   return byteBuffer;
 }
