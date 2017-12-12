@@ -1,0 +1,15 @@
+[Unit]
+Description=My app
+
+[Service]
+ExecStart=/var/control-cortex/bin/cortex.js
+Restart=always
+User=nobody
+# Note RHEL/Fedora uses 'nobody', Debian/Ubuntu uses 'nogroup'
+Group=nogroup
+Environment=PATH=/usr/bin:/usr/local/bin
+Environment=NODE_ENV=production
+WorkingDirectory=/var/control-cortex
+
+[Install]
+WantedBy=multi-user.target
