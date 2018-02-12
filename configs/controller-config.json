@@ -1,0 +1,37 @@
+{
+  "name":"nola-basecamp",
+  "modules": {
+    "module": {
+      "name":"gimbals",
+      "device-type":"i2c-module",
+      "signal-type":"dhmi-256",
+      "device-name":"gimbal module",
+      "device-address":"0x00",
+      "-type":"event-subscription"
+    },
+    "module": {
+      "name":"frsky-radio",
+      "device-type":"i2c-module",
+      "signal-type":"modulated-output",
+      "device-name":"frsky module",
+      "device-address":"0x00",
+      "sample-type":"push"
+    },
+    "module": {
+      "name":"zuhf-radio",
+      "device-type":"i2c-module",
+      "signal-type":"modulated-output",
+      "device-name":"ezuhf module",
+      "device-address":"0x00",
+      "sample-type":"push"
+    },
+    "module": {
+      "name":"state-vars",
+      "device-type":"synthetic-signal",
+      "device-name":"instrument cluster",
+      "signal-type":"digital",
+      "device-address":"172.0.0.1:9999",
+      "sample-type":"service"
+    }
+  }
+}
