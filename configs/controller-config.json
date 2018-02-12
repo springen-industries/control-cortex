@@ -5,6 +5,11 @@
       "name":"gimbals",
       "device-type":"i2c-module",
       "signal-type":"dhmi-256",
+      "signal-filters":{
+        "name":"a notch filter",
+        "lowThresholdHz":"900",
+        "highThresholdHz":"2000"
+      },
       "device-name":"gimbal module",
       "device-address":"0x00",
       "-type":"event-subscription"
