@@ -5,8 +5,9 @@ var config = require('../configs/controller-config.json');
 console.log("Read configuration: ~/configs/controller-config.json and found " + config.modules.length + " modules")
 //console.log(beautify(config));
 
-function begin(){
+function begin(modules){
   console.log("Starting main loop");
+  console.log(beautify(modules));
 }
 
 // this will launch an instance and callback for each module found.
