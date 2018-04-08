@@ -20,6 +20,7 @@
   "dependencies": {
     "i2c": "^0.2.3",
     "i2c-bus": "^1.2.3",
+    "service": "^0.1.4",
     "sleep": "^5.1.1"
   }
 }
